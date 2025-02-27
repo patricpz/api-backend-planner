@@ -7,7 +7,6 @@ export interface CreatePlanerRequest {
   departureDate: string;
   returnDate: string;
   numberOfTravelers: number;
-  notes?: string; 
   objective?: string;
 }
 
@@ -21,7 +20,6 @@ class CreatePlanerController {
       departureDate,
       returnDate,
       numberOfTravelers,
-      notes,
       objective
     } = request.body as CreatePlanerRequest;
 
@@ -34,7 +32,6 @@ class CreatePlanerController {
         departureDate,
         returnDate,
         numberOfTravelers,
-        notes,
         objective
       });
 

@@ -3,16 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
 class CreatePlanerServices {
-    //   private aiClient: GoogleGenerativeAI;
-
-    //   constructor() {
-    //     // Inicializando o cliente do Google Generative AI com a chave de API
-    //     this.aiClient = new GoogleGenerativeAI({
-    //         apiKey: process.e
-    //     });
-    //   }
-
-    async execute({ name, destination, departureDate, numberOfTravelers, returnDate, notes, objective }: CreatePlanerRequest) {
+    async execute({ name, destination, departureDate, numberOfTravelers, returnDate, objective }: CreatePlanerRequest) {
         console.log("Recebendo os dados para criar o plano:", CreatePlanerServices);
 
 
@@ -27,7 +18,7 @@ class CreatePlanerServices {
                 data de retorno: ${returnDate}, 
                 e com foco e objetivo em ${objective}, 
                 com o numero de pessoas ${numberOfTravelers},
-                com notas ${notes}, quero que retorne lugares para se visitar no destino e o que fazer na cidade
+                quero que retorne lugares para se visitar no destino e o que fazer na cidade
                 ignore qualquer outro parametro que não seja os 
                 passados, retorne em json com as respectivas propriedades, 
                 propriedade nome o nome da pessoa, propriedade destino 
